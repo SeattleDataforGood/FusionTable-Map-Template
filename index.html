@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang='en'>
   <head>
-    <title>Searchable Map Template Demo 1</title>
+    <title>Seattle City Project Guide</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map Template</a>
+          <a class='navbar-brand' href='index.html'>Seattle City Project Guide</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -36,7 +36,7 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>This is a demo of <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. Use this section to give a little context to your map.</p>
+          <p>Seattle Data For Good<a href='http://seattledataforgood.org'>website</a></p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -55,7 +55,27 @@
                 </select>
               </label>
             </p>
-
+<h4>
+  Neighborhoods
+<label>
+  <select id='select_type'>
+    <option value=''>Neighborhoods</option>
+    <option value='1'>Ballard</option>
+    <option value='2'>Capitol Hill</option>
+    <option value='3'>West Seattle</option>
+  </select>
+</label>
+  <h4>
+  Categories
+</h4>
+<label>
+  <select id='select_type'>
+    <option value=''>Categories</option>
+    <option value='1'>Health</option>
+    <option value='2'>Environment</option>
+    <option value='3'>Government</option>
+  </select>
+</label>
             <br />
             <h4>Custom filters and views</h4>
             <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
@@ -119,11 +139,11 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
+            fusionTableId:      "1i_Cfd1zwIn-vpz_Lqm-di7t36gDptrsSrdJpKpaE",
             googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
             locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago"
+            map_center:         [47.600, -122.300],
+            locationScope:      "seattle"
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
