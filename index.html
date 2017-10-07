@@ -176,13 +176,12 @@
         
         $(function() {
           var myMap = new MapsLib({
-//**actual parameters
-            fusionTableId:      "1i_Cfd1zwIn-vpz_Lqm-di7t36gDptrsSrdJpKpaE",
+            fusionTableId:      "1i_Cfd1zwIn-vpz_Lqm-di7t36gDptrsSrdJpKpaE", 
             googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
             locationColumn:     "geometry",
             map_center:         [47.600, -122.300],
             locationScope:      "seattle"
-          });
+          }); //**actual parameters
 
 //**autocomplete address
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
