@@ -144,13 +144,12 @@
           </noscript>
           
 <!--** MAP -->
-          
-<!--** link to template
           <div id='map_canvas'></div>
+<!--** link to template
           <p class='pull-right'>
             <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> by <a href='http://derekeder.com'>Derek Eder</a>.
--->
         </p>
+-->
         </div>
       </div>
     </div>
@@ -169,11 +168,12 @@
       //<![CDATA[
         $(window).resize(function () {
           var h = $(window).height(),
-            offsetTop = 105; // Calculate the top offset  //**actual parameters
+            offsetTop = 105; // Calculate the top offset  
         
           $('#map_canvas').css('height', (h - offsetTop));
         }).resize();
         
+//**actual parameters		
         $(function() {
           var myMap = new MapsLib({
             fusionTableId:      "1i_Cfd1zwIn-vpz_Lqm-di7t36gDptrsSrdJpKpaE", 
@@ -183,9 +183,9 @@
             locationScope:      "seattle"
           });
 
-
-          var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
 //**autocomplete address      
+          var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+		  
 //**buttons and boxes
           $(':checkbox').click(function(){
             myMap.doSearch();
