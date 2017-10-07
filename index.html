@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang='en'>
   <head>
+    
 <!--**page title-->
     <title>Seattle City Project Guide</title>  
     <meta charset='utf-8' />
@@ -17,6 +18,7 @@
   </head>
   
   <body>
+    
 <!--**bootstrapBlocks-->
     <div class='navbar navbar-default navbar-static-top'>
       <div class='container-fluid'>
@@ -26,11 +28,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          
 <!--**HeadTitle-->
           <a class='navbar-brand' href='index.html'>Seattle City Project Guide</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+            
 <!--**TopButtons-->
             <li class='active'><a href="index.html">Map</a></li>
             <li><a href="about.html">About</a></li>
@@ -47,10 +51,12 @@
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
             </h4>
             <p>
+              
 <!--**address form-->
               <input class='form-control' id='search_address' placeholder='Enter an address or an intersection' type='text' />
             </p>
             <p>
+              
 <!--**radius-->
               <label>
                 within
@@ -154,11 +160,12 @@
     <script type="text/javascript" src="js/jquery.address.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/maps_lib.js"></script>
-    <script type='text/javascript'>
     
 <!--**using api key from template->
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyAR5eeFETe-sMigouZtPABzHpyA02MGyjQ"></script>
       
+<!--**javascript start->
+    <script type='text/javascript'>
       //<![CDATA[
         $(window).resize(function () {
           var h = $(window).height(),
@@ -169,7 +176,7 @@
         
         $(function() {
           var myMap = new MapsLib({
-<!--**actual parameters->
+//**actual parameters
             fusionTableId:      "1i_Cfd1zwIn-vpz_Lqm-di7t36gDptrsSrdJpKpaE",
             googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
             locationColumn:     "geometry",
@@ -177,10 +184,10 @@
             locationScope:      "seattle"
           });
 
-<!--**autocomplete address->
+//**autocomplete address
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
       
-<!--**buttons and boxes->
+//**buttons and boxes
           $(':checkbox').click(function(){
             myMap.doSearch();
           });
